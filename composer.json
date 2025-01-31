@@ -1,0 +1,118 @@
+{
+    "name": "qwen-php/qwen-php-client",
+    "description": "robust and community-driven PHP SDK library for seamless integration with the qwen AI API, offering efficient access to advanced AI and data processing capabilities",
+    "homepage": "https://github.com/qwen-php/qwen-php-client",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "qwen",
+        "qwen-php-sdk",
+        "qwen-sdk",
+        "qwen-api",
+        "php-qwen",
+        "alibaba-ai",
+        "alibaba",
+        "qwen-coder",
+        "qwen-integration",
+        "openai",
+        "deepseek",
+        "deepseek-php",
+        "sdk",
+        "codex",
+        "GPT-3",
+        "DALL-E",
+        "api",
+        "client",
+        "php-sdk",
+        "php-ai",
+        "ai-for-php",
+        "ai-sdk",
+        "ai-api",
+        "natural",
+        "language",
+        "processing",
+        "qwen-php-library",
+        "qwen-client",
+        "natural-language-processing",
+        "ai-integration",
+        "machine-learning",
+        "php-machine-learning",
+        "php-iot",
+        "nlp",
+        "data-processing",
+        "deep-learning",
+        "qwen-library",
+        "php-library",
+        "api-integration",
+        "php-api-client",
+        "qwen-ai",
+        "php-openai-alternative",
+        "ai-client-library"
+    ],
+    "authors": [
+        {
+            "name": "qwen-php",
+            "email": "omaralwi2010@gmail.com",
+            "role": "owner"
+        },
+        {
+            "name": "Omar Alalwi",
+            "email": "omaralwi2010@gmail.com",
+            "role": "creator"
+        }
+    ],
+    "version": "1.0.0",
+    "require": {
+        "php": "^8.1.0",
+        "php-http/discovery": "^1.20.0",
+        "php-http/multipart-stream-builder": "^1.4.2",
+        "psr/http-client": "^1.0.3",
+        "psr/http-client-implementation": "^1.0.1",
+        "psr/http-factory-implementation": "*",
+        "psr/http-message": "^1.1.0|^2.0.0"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.9.2",
+        "guzzlehttp/psr7": "^2.7.0",
+        "laravel/pint": "^1.18.1",
+        "mockery/mockery": "^1.6.12",
+        "nunomaduro/collision": "^7.11.0|^8.5.0",
+        "pestphp/pest": "^2.36.0|^3.5.0",
+        "pestphp/pest-plugin-arch": "^2.7|^3.0",
+        "pestphp/pest-plugin-type-coverage": "^2.8.7|^3.1.0",
+        "phpstan/phpstan": "^1.12.7",
+        "roave/security-advisories": "dev-latest",
+        "symfony/var-dumper": "^6.4.11|^7.1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Qwen\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Qwen\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "lint": "pint -v",
+        "test:lint": "pint --test -v",
+        "test:types": "phpstan analyse --ansi",
+        "test:type-coverage": "pest --type-coverage --min=100",
+        "test:unit": "pest --colors=always",
+        "test": [
+            "@test:lint",
+            "@test:types",
+            "@test:type-coverage",
+            "@test:unit"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    }
+}
