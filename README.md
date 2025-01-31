@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://qwen-php/qwen-php-client" target="_blank">
-    <img src="https://raw.githubusercontent.com/qwen-php/qwen-php-client/master/public/images/qwen_screenshot.png" alt="Gpdf">
+    <img src="https://raw.githubusercontent.com/qwen-php/qwen-php-client/main/public/images/qwen_screenshot.png" alt="Gpdf">
   </a>
 </p>
 
