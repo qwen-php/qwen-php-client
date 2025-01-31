@@ -61,7 +61,7 @@
             "role": "creator"
         }
     ],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "require": {
         "php": "^8.1.0",
         "php-http/discovery": "^1.20.0",
