@@ -4,10 +4,6 @@
   </a>
 </p>
 
-## 🚧 This Project is Under Development!
-
-V1 will Released in few Days .
-
 # qwen PHP Client
 
 ## Table of Contents
@@ -84,7 +80,7 @@ echo 'API Response:'.$response;
 
 ## Use With Frameworks
 
-Coming soon
+### [Laravel Qwen Package](https://github.com/qwen-php/qwen-laravel)
 
 ---
 
