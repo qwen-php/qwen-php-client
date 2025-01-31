@@ -2,7 +2,7 @@
 
 namespace Qwen;
 
-use Qwen\Contracts\DeepseekClientContract;
+use Qwen\Contracts\QwenClientContract;
 use Qwen\Contracts\Models\ResultContract;
 use Qwen\Resources\Resource;
 use Psr\Http\Client\ClientInterface;
@@ -14,7 +14,7 @@ use Qwen\Enums\Configs\TemperatureValues;
 use Qwen\Traits\Resources\{HasChat, HasCoder};
 use Qwen\Enums\Configs\DefaultConfigs;
 
-class QwenClient implements DeepseekClientContract
+class QwenClient implements QwenClientContract
 {
     use HasChat, HasCoder;
 
@@ -55,7 +55,7 @@ class QwenClient implements DeepseekClientContract
     protected ResultContract $result;
 
     /**
-     * Initialize the DeepseekClient with a PSR-compliant HTTP client.
+     * Initialize the QwenClient with a PSR-compliant HTTP client.
      *
      * @param ClientInterface $httpClient The HTTP client used for making API requests.
      */
@@ -82,12 +82,12 @@ class QwenClient implements DeepseekClientContract
     }
 
     /**
-     * Create a new DeepseekClient instance with the given API key.
+     * Create a new QwenClient instance with the given API key.
      *
      * @param string $apiKey The API key for authentication.
      * @param string|null $baseUrl The base URL for the API (optional).
      * @param int|null $timeout The timeout duration for requests in seconds (optional).
-     * @return self A new instance of the DeepseekClient.
+     * @return self A new instance of the QwenClient.
      */
     public static function build(string $apiKey, ?string $baseUrl = null, ?int $timeout = null): self
     {
