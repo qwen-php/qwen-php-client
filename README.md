@@ -72,7 +72,7 @@ $apiKey = 'your-api-key';
 $response = QwenClient::build($apiKey, 'https://dashscope-intl.aliyuncs.com', 500)
     ->query('System setup query', 'system')
     ->query('User input message', 'user')
-    ->withModel(Models::CODER->value)
+    ->withModel(Models::QWEN_VL_MAX->value)
     ->run();
 
 echo 'API Response:'.$response;
