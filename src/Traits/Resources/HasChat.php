@@ -19,6 +19,7 @@ trait HasChat
             'stream' => $this->stream,
         ];
         $this->queries = [];
-        return (new Chat($this->httpClient))->sendRequest($requestData);
+        $this->setResult((new Chat($this->httpClient))->sendRequest($requestData));
+        return $this->getResult()->getContent();
     }
 }

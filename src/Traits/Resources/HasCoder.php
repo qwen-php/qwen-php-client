@@ -19,6 +19,7 @@ trait HasCoder
             'stream' => $this->stream,
         ];
         $this->queries = [];
-        return (new Coder($this->httpClient))->sendRequest($requestData);
+        $this->setResult((new Coder($this->httpClient))->sendRequest($requestData));
+        return $this->getResult()->getContent();
     }
 }
