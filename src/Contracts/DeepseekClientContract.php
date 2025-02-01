@@ -2,9 +2,9 @@
 
 namespace Qwen\Contracts;
 
-use Qwen\DeepseekClient;
+use Qwen\QwenClient;
 
-interface DeepseekClientContract
+interface QwenClientContract
 {
     public static function build(string $apiKey): self;
     public function run(): string;
