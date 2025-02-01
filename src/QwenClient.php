@@ -77,7 +77,7 @@ class QwenClient implements DeepseekClientContract
         ];
         // Clear queries after sending
         $this->queries = [];
-        $this->result = (new Resource($this->httpClient))->sendRequest($requestData);
+        $this->setResult((new Resource($this->httpClient))->sendRequest($requestData));
         return $this->getResult()->getContent();
     }
 
@@ -149,6 +149,17 @@ class QwenClient implements DeepseekClientContract
             'role' => $role ?: QueryRoles::USER->value,
             'content' => $content
         ];
+    }
+
+    /**
+     * set result model
+     * @param \Qwen\Contracts\Models\ResultContract $result
+     * @return self The current instance for method chaining.
+     */
+    public function setResult(ResultContract $result)
+    {
+        $this->result = $result;
+        return $this;
     }
 
     /**
