@@ -12,6 +12,12 @@ enum HTTPState: int
 
     /**
      * HTTP client error response
+     * status is bad request
+     */
+    case BAD_REQUEST = 400;
+
+    /**
+     * HTTP client error response
      * status is unauthorized
      */
     case UNAUTHORIZED = 401;
@@ -21,5 +27,11 @@ enum HTTPState: int
      * status is payment required
      */
     case PAYMENT_REQUIRED = 402;
+
+    /**
+     * HTTP client error response
+     * status is forbidden
+     */
+    case FORBIDDEN = 403;
 
 }
